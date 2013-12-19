@@ -5,18 +5,18 @@ require Dir.pwd + '/home.rb'
 # declare static resources that should be left alone by ruby
 use Rack::Static,
   :urls => ["/images", "/js", "/css"]
-#  :root => "public"
 
 class AppServer
 	def call(env)
 		case env['SCRIPT_NAME']
 		when '/search';
 			a = App.new env
-			[200, {"Content-Type" => "text/html"}, [a.html]] # gives 200 response and displays card page
+			text = a.html # displays card page
 		when '/home';
-			a = Home.new env
-			[200, {"Content-Type" => "text/html"}, [a.html]] # gives 200 response and displays card page
+			h = Home.new env
+			text = h.html # displays home page
 		end
+		[200, {"Content-Type" => "text/html"}, [text]] # gives 200 response
 	end
 end
 

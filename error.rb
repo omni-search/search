@@ -4,9 +4,15 @@ class Error
 	end
 	
 	def html()
-	  '<title> Oh Snap!</title>
-	  <h1> 404</h1>
-	  <h1> Unfortunatly the page you were looking for is not on this server</h1>
-	  <h1> Maybe you were looking for <a href="/home">this?</a></h1>'# shows error page
+		'<html>
+			<head>
+				<title> Oh Snap!</title>
+			</head>
+			<body>
+				<h1> 404</h1>
+				<p> Unfortunatly the page you were looking for is not on this server</p>
+				<p> Maybe you were looking for <a href="/home">this?</a></p>
+			</body>
+		</html>' # shows error page
 	end
 end
