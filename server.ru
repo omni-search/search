@@ -1,5 +1,5 @@
 require Dir.pwd + '/app.rb'
-
+require Dir.pwd + '/home.rb'
 
 class AppServer
 	def call(env)
@@ -10,8 +10,8 @@ end
 
 class ErrorServer
 	def call(env)
-		a = App.new env
-		[200, {"Content-Type" => "text/html"}, [a.error]]
+		h = Home.new env
+		[200, {"Content-Type" => "text/html"}, [h.html]]
 	end
 end
 
