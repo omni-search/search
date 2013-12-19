@@ -15,4 +15,7 @@ class App
 		end
 		string += '</body></html>'
 	end
+	def error()
+	  "<h1> ERROR. Please Try Again</h1>"
+	end
 end
