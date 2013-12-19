@@ -1,15 +1,17 @@
 require Dir.pwd + '/cards/wikipediacard.rb'
 require Dir.pwd + '/cards/twitter.rb'
+
 class Cards
 	def self.getCards(searchterm)
 		cards = []
 		cards << '<div class="card">example card. you searched for: ' + searchterm + '</div>'
 		wiki = Wikipedia.new searchterm
 		tweet = Twitter.new searchterm
-		if wiki.show # only show the card if it wants to be show
+		if wiki.show # only show the card if it wants to be shown
 			cards << wiki.html # add the html for the card to the cards
-		elsif tweet.show
-		  cards<<tweet.html
+		end
+		if tweet.show # if, not elsif, otherwise you will only get one and not the other!
+		  cards << tweet.html
 		end	
 		
 		return cards

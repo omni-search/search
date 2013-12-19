@@ -3,7 +3,7 @@ require 'oauth'
 require 'json'
 
 class Twitter
-  def intialize(searchterm)
+  def initialize(searchterm)
     baseurl = "https://api.twitter.com"
     path    = "/1.1/statuses/search/tweets.json"
     query   = URI.encode_www_form("q" => searchterm )
@@ -33,13 +33,14 @@ class Twitter
    end 
    
   def search(tweet)
-    
     @title = 'Twitter'
     @text = tweet
   end
+  
   def html()
     Cards.cardTemplate( @image ,@title, @text)
   end
+  
   def show
       true
   end
