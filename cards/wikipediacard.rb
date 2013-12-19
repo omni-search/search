@@ -1,12 +1,12 @@
 class Wikipedia
 	def initialize(searchterm)
-		#do setup
+		# do setup
 		@image = 'http://a.url'
 		@title = 'Wikipedia'
 		@text = 'This is on wikipedia: blob is a file form...'
 	end
 		
-	def show
+	def show # show the card or not? 
 		true
 	end
 		

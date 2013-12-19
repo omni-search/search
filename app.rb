@@ -9,7 +9,7 @@ class App
 		request = Rack::Request.new @env
 		searchterm = request.params[:q]
 		string = '<html><head><!--stuff--></head></body>'
-		cards = Cards.getCards searchterm
+		cards = Cards.getCards searchterm # get all cards
 		cards.each do |card|
 			string += card
 		end
