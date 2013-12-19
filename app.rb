@@ -1,5 +1,18 @@
+require Dir.pwd + '/cards.rb'
+
 class App
+	def initialize(env)
+		@env = env
+	end
+	
 	def html()
-		'<h2>Hi</h2>'
+		request = Rack::Request.new @env
+		searchterm = request.params[:q]
+		string = '<html><head><!--stuff--></head></body>'
+		cards = Cards.getCards searchterm
+		cards.each do |card|
+			string += card
+		end
+		string += '</body></html>'
 	end
 end

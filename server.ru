@@ -2,7 +2,7 @@ require Dir.pwd + '/app.rb'
 
 class RackServer
   def call(env)
-	a = App.new
+	a = App.new env
     [200, {"Content-Type" => "text/html"}, [a.html]]
   end
 end
