@@ -1,4 +1,5 @@
 require Dir.pwd + '/cards.rb'
+require Dir.pwd + '/commonhtml.rb'
 
 class App
 	def initialize(env)
@@ -9,11 +10,8 @@ class App
 		request = Rack::Request.new @env
 		searchterm = request.params['q']
 		#return request.params.inspect
-		string = '<html>
-			<head>
-				<link rel="stylesheet" type="text/css" href="/css/cards.css">
-			</head>
-			<body>'
+		string = '<html>' + CommonHTML.getHead(cards = true) # get head, including cards elements
+		string += '<body>' + CommonHTML.getHeader(searchPreload = searchterm) # get the header bar, and add the preloaded search value
 		if !searchterm
 			string += 'You gave no searchterm'
 		else 

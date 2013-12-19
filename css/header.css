@@ -1,0 +1,13 @@
+/* FOR THE HEADER */
+#header {
+	background-color: #005;
+	padding: 1em;
+}
+
+#header img {
+	float: left;
+}
+
+#header form {
+	margin: 0;
+}
