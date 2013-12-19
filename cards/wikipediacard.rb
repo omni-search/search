@@ -3,7 +3,7 @@ class Wikipedia
 		# do setup
 		@image = 'http://a.url'
 		@title = 'Wikipedia'
-		@text = 'This is on wikipedia: blob is a file form...'
+		@text = 'This is on wikipedia: ' + searchterm + ' is a...'
 	end
 		
 	def show # show the card or not? 

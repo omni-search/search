@@ -7,11 +7,16 @@ class App
 	
 	def html()
 		request = Rack::Request.new @env
-		searchterm = request.params[:q]
+		searchterm = request.params['q']
+		#return request.params.inspect
 		string = '<html><head><!--stuff--></head></body>'
-		cards = Cards.getCards searchterm # get all cards
-		cards.each do |card|
-			string += card
+		if !searchterm
+			string += 'You gave no searchterm'
+		else 
+			cards = Cards.getCards searchterm # get all cards
+			cards.each do |card|
+				string += card
+			end
 		end
 		string += '</body></html>'
 	end
