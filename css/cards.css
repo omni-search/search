@@ -1,0 +1,13 @@
+.card {
+	background-color: #CCC;
+	padding: 1em;
+	margin: 1em;
+}
+
+.card img {
+	float: left
+}
+
+.card .title {
+	font-weight: bold;
+}

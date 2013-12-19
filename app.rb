@@ -9,7 +9,11 @@ class App
 		request = Rack::Request.new @env
 		searchterm = request.params['q']
 		#return request.params.inspect
-		string = '<html><head><!--stuff--></head></body>'
+		string = '<html>
+			<head>
+				<link rel="stylesheet" type="text/css" href="/css/cards.css">
+			</head>
+			<body>'
 		if !searchterm
 			string += 'You gave no searchterm'
 		else 
