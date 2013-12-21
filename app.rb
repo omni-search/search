@@ -12,7 +12,7 @@ class App
 		#return request.params.inspect
 		string = '<html>' + CommonHTML.getHead(cards = true) # get head, including cards elements
 		
-		if searchterm == ""
+		if searchterm.length < 1
 			string += '<script> alert("You didnt search for anything")</script>'
 			string += '<script> window.location.href = "/home";</script>'
 		else 
