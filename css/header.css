@@ -1,11 +1,17 @@
 /* FOR THE HEADER */
 #header {
-	background-color: #005;
+	background-color: #00658b;
 	padding: 1em;
+	border-radius: 5px;
 }
 
 #header img {
 	float: left;
+	height: 49;
+	width: 97;
+	
+	
+
 }
 
 #header form {

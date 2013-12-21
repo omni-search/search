@@ -1,5 +1,14 @@
 /* FOR EVERY PAGE */
 html, body {
-	margin: 0;
-	padding: 0;
+	margin: 5;
+	padding: 3;
+	background-color: #d9e0d2;
+	font-family:Tahoma, Geneva, sans-serif
+	
+}
+h1{
+	text-align:center
+}
+p{
+	text-align:center
 }
