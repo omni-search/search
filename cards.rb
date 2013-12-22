@@ -10,13 +10,4 @@ class Cards
 		end
 		return cards
 	end
-	
-	# show the card, using the template and the info passed to this function
-	def self.cardTemplate(image, title, text)
-		'<div class="card">
-			<img src="' + image + '" />
-			<span class="title">' + title + '</span>
-			<span class="text">' + text + '</span>
-		</div>' # this is just an example at the mo, the actual html can be changed
-	end
 end

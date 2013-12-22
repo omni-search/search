@@ -1,6 +1,6 @@
 /* FOR SEARCH RESULTS PAGE */
 .card {
-	background-color: #CCC;
+	background-color: #DDD;
 	padding: 1em;
 	margin: 1em;
 }
@@ -12,3 +12,18 @@
 .card .title {
 	font-weight: bold;
 }
+
+/* FOR WIKIPEDIA CARD */
+.wikipedia .main {
+	display: block;
+	padding: 1em;
+	color: inherit;
+	text-decoration: none;
+	background-color: #CCC;
+	margin-bottom: 1em;
+}
+.wikipedia .main:hover {
+	background-color: #BBB;
+}
+
+
