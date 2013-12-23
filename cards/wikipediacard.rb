@@ -1,31 +1,8 @@
 require 'json'
+require 'net/http'
 
 class Wikipedia
 	def initialize(searchterm)
-		# do setup
-	  # https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=chickens&srprop=snippet&srlimit=3
-
-#	  data = URI.encode_www_form 'action' => 'query',
-#	    'list' => 'search',
-#	    'srsearch' => searchterm,
-#	    'srprop' => 'snippet',
-#	    'srlimit' => 3
-#	  url = URI 'http://en.wikipedia.org/w/api.php'
-#    url.query = data
-#	  http = Net::HTTP.new url.host
-#	  request = http.get url
-#	  response = request.body
-
-#    if request.is_a? Net::HTTPSuccess
-#      @show = true
-#      @text = res.body
-#    else
-#      @show = false
-#    end
-
-#	  puts request.inspect
-	  puts 'hi'
-
     uri = URI 'http://en.wikipedia.org/w/api.php'
 
     data = URI.encode_www_form 'action' => 'query',
