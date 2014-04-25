@@ -2,7 +2,7 @@ require 'json'
 require 'net/http'
 
 class Wikipedia
-	def initialize(searchterm)
+  def initialize(searchterm)
     uri = URI 'http://en.wikipedia.org/w/api.php'
 
     data = URI.encode_www_form 'action' => 'query',
@@ -30,14 +30,14 @@ class Wikipedia
            :url => 'http://en.wikipedia.org/wiki/' + URI.encode(json[2]['title']),
         },
       ]
-	  }
-	end
+    }
+  end
 
-	def show # show the card or not?
-		true
-	end
+  def show # show the card or not?
+    true
+  end
 
-	def html
+  def html
     '<div class="card wikipedia">
       <a href="' + @data[:url] + '" class="main">
         <span class="title">' + @data[:title] + '</span><br />
@@ -47,5 +47,5 @@ class Wikipedia
       <a href="' + @data[:also][0][:url] + '" class="also">' + @data[:also][0][:title] + '</a>,
       <a href="' + @data[:also][1][:url] + '" class="also">' + @data[:also][1][:title] + '</a>
     </div>'
-	end
+  end
 end
